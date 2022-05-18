@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class ProgramWriting7 {
+    public static void main(String [] args){
+        Scanner scan=new Scanner(System.in);
+
+        System.out.print("Enter a value for Row: ");
+        int row=scan.nextInt();
+        System.out.print("Enter a value for Column: ");
+        int column=scan.nextInt();
+
+
+        for(int x=0; x<row; x++){   //rows //outer
+            for(int y=1; y<column; y++){   //columns  // inner
+                System.out.print("*");
+            }
+            System.out.println("*");
+
+        }
+
+
+    }
+}
