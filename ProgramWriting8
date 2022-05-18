@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class ProgramWriting8 {
+    public static void main(String [] args){
+        Scanner scan=new Scanner(System.in);
+        char choose;
+
+        do{
+            System.out.print("Please enter your name: ");
+            String name=scan.next();
+            scan.nextLine();
+            System.out.print("Please enter your address: ");
+            String address=scan.nextLine();
+            System.out.print("Please enter your Birthdate: ");
+            String birthdate=scan.nextLine();
+            System.out.print("Please enter your Height: ");
+            String height=scan.nextLine();
+            System.out.print("Please enter your Weight: ");
+            String weight=scan.nextLine();
+            System.out.println("Registration Successful!\n");
+
+            System.out.println("Name: "+name);
+            System.out.println("Address: "+address);
+            System.out.println("Birthdate: "+birthdate);
+            System.out.println("Height: "+height);
+            System.out.println("Weight: "+weight);
+            System.out.println("Do you want to register another?");
+            System.out.print("Enter Y if yes and N if no: ");
+            choose=scan.next().charAt(0);
+
+        }
+        while(choose=='Y' || choose=='y');
+
+    }
+}
