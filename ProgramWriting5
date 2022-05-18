@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ProgramWriting5 {
+    public static void main(String [] args){
+        Scanner scan= new Scanner(System.in);
+
+        System.out.println("EveryGym Registration \n"); //gym name
+        System.out.print("Please enter your name: ");
+        String name=scan.nextLine();
+        System.out.print("Please enter your address: ");
+        String address=scan.nextLine();
+        System.out.print("Please enter your Birthdate: ");
+        String birthdate=scan.nextLine();
+        System.out.print("Please enter your Height: ");
+        String height=scan.nextLine();
+        System.out.print("Please enter your Weight: ");
+        String weight=scan.nextLine();
+        System.out.println("Registration Successful!\n");
+
+        //Display
+        System.out.println("Name: "+name);
+        System.out.println("Address: "+address);
+        System.out.println("Birthdate: "+birthdate);
+        System.out.println("Height: "+height);
+        System.out.println("Weight: "+weight);
+
+    }
+}
