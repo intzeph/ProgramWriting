@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class ProgramWriting6 {
+    public static void main(String [] args){
+        Scanner scan=new Scanner(System.in);
+
+        int Age;
+
+        System.out.print("Please enter your name: ");
+        String name=scan.nextLine();
+        System.out.print("Please enter your gender: ");
+        String gender=scan.nextLine();
+        System.out.print("Please enter your birthday day: ");
+        String birthDay=scan.nextLine();
+        System.out.print("Please enter your birth month: ");
+        String birthMonth=scan.nextLine();
+        System.out.print("Please enter your birth year: ");
+        int birthYear=scan.nextInt();
+        scan.nextLine();
+        System.out.print("Please enter the date today(Day, Month & int Year):");
+        String dateToday=scan.nextLine();
+        Age=(2022-birthYear);
+
+        System.out.println("\nName: "+name);
+        if (gender.equals("F") || gender.equals("f") || gender.equals("female") || gender.equals("FEMALE") || gender.equals("Female")||
+                gender.equals("babae") || gender.equals("Babae") || gender.equals("BABAE") || gender.equals("Girl") || gender.equals("girl")
+                || gender.equals("GIRL")){
+            System.out.println("Gender: Female");
+        }
+        else if(gender.equals("M") || gender.equals("m") || gender.equals("male") || gender.equals("MALE") || gender.equals("Male")||
+                gender.equals("lalake") || gender.equals("Lalake") || gender.equals("LALAKE") || gender.equals("Boy") || gender.equals("boy")
+                || gender.equals("BOY")){
+            System.out.println("Gender: Male");
+        }
+        else{
+            System.out.println("Invalid Gender");
+        }
+        System.out.println("Birthday: "+birthMonth+","+birthDay+","+birthYear);
+        System.out.println("Age: "+Age);
+
+
+
+
+
+    }
+}
