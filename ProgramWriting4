@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class ProgramWriting4 {
+    public static void main(String[]args){
+        Scanner scan = new Scanner (System.in);
+
+        //declare variables
+        double Area,Perimeter;
+        //lEtuserchoose
+        System.out.println("Please choose a number");
+        System.out.println("1 For a rectangle");
+        System.out.println("2 For a Square");
+        int Choose= scan.nextInt();
+        //switch
+        switch(Choose) {
+            case 1:
+                System.out.println("***RECTANGLE***");
+                System.out.print("Please enter a value of length(cm): ");
+                Double RecLength=scan.nextDouble();
+                System.out.print("Please enter a values of width(cm): ");
+                Double RecWidth=scan.nextDouble();
+                Area= RecLength * RecWidth; // area formula
+                System.out.println("\nThe Area of rectangle is: "+Area+"cm");
+                Perimeter= 2*(RecLength+RecWidth);  //perimeter formula
+                System.out.println("The Perimeter of rectangle is: "+Perimeter+"cm");
+                break;
+
+            case 2:
+                System.out.println("***SQUARE***");
+                System.out.print("Please enter the value of side length(cm): ");
+                Double LengthWidth=scan.nextDouble();
+                Area= LengthWidth*LengthWidth;  //area formula
+                System.out.println("\nThe Area of square is: "+ Area+"cm");
+                Perimeter= LengthWidth*4; // perimeter formula
+                System.out.println("The Perimeter of square is: "+ Perimeter+"cm");
+                break;
+        }
+
+    }
+
+}
