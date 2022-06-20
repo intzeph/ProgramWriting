@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class ProgramWriting9 {
+    public static void main(String[] args) {
+
+        Scanner scan= new Scanner(System.in);
+
+        String [] studentsName= new String[10];
+        int [][] studentGrades=new int[10][10];
+
+        //input names
+        System.out.println("Enter 10 students name: ");
+        for(int i=0; i<studentsName.length; i++){
+            studentsName[i]= scan.nextLine();
+        }
+
+        //input grades
+        System.out.println("Enter a 10 rows and 10 column grades from 70-100");
+        for(int x=0; x<studentGrades.length; x++){
+            for(int y=0; y<studentGrades.length; y++){
+                studentGrades[x][y]=scan.nextInt();
+
+            }
+        }
+        // showing names
+        System.out.println("_____________________________________________________");
+        for(int z=0; z<studentsName.length; z++){
+            System.out.println(studentsName[z]);
+        }
+
+        //showing grades
+        for(int row=0; row<studentGrades.length; row++){
+            System.out.println();
+            for(int column=0; column<studentGrades[row].length; column++){
+                System.out.print(studentGrades[row][column]+" ");
+
+            }
+        }
+
+        //lower part
+        // name
+        System.out.println("\n \nEnter student name index");
+        int input= scan.nextInt();
+        System.out.println(studentsName[input]);
+
+        //grade
+        System.out.println("Enter index(row) for grade");
+        int inRow= scan.nextInt();
+        System.out.println("Enter index(column) for grade");
+        int inColumn=scan.nextInt();
+
+        System.out.println(studentGrades[inRow][inColumn]);
+
+    }
+}
