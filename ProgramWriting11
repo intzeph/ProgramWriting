@@ -1,0 +1,102 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class ProgWri11 extends JFrame {
+    private JLabel Product;
+    private JLabel Descript;
+    private JLabel Price;
+    private JPanel MainS;
+    private JTextField prodCode;
+    private JTextField showDescript;
+    private JTextField showPrice;
+    private JTextField inQuantity;
+    private JLabel Quantity;
+    private JButton FindButton;
+    private JTextField TotalA;
+    private JTextField Pay;
+    private JButton PAYButton;
+    private JTextField uChange;
+    private JButton ComputeButton;
+
+
+    public ProgWri11(String title){
+        super(title);
+        this.setContentPane(MainS);
+        this.pack();
+
+
+        ComputeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                int code=Integer.parseInt(prodCode.getText());
+                double quantity=Double.parseDouble(inQuantity.getText());
+                String choose="";
+                String productPrice="";
+                double quantityF;
+                double FinalQuan;
+
+                if (code==10001 ){
+                    choose="LV Bag";
+                    productPrice="105,000.00";
+                    quantityF=105000.00;
+                    FinalQuan=quantity*quantityF;
+                    showDescript.setText(choose);
+                    showPrice.setText(productPrice);
+                    TotalA.setText(Double.toString(FinalQuan));
+                }
+                else if (code==10002){
+                    choose="Channel Bucket";
+                    productPrice="306,502.50";
+                    quantityF=306502.50;
+                    FinalQuan=quantity*quantityF;
+                    showDescript.setText(choose);
+                    showPrice.setText(productPrice);
+                    TotalA.setText(Double.toString(FinalQuan));
+                } else if (code==10003) {
+                    choose="Gucci Belt";
+                    productPrice="50,505.00";
+                    quantityF=50505.00;
+                    FinalQuan=quantity*quantityF;
+                    showDescript.setText(choose);
+                    showPrice.setText(productPrice);
+                    TotalA.setText(Double.toString(FinalQuan));
+                }
+                else{
+                    choose="Invalid Prodcut code";
+                    productPrice="Invalid";
+                }
+
+
+            }
+        });
+
+        PAYButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                int Code=Integer.parseInt(prodCode.getText());
+                double pay=Double.parseDouble(Pay.getText());
+                double newPrice=Double.parseDouble(TotalA.getText());
+                double finalPay;
+
+                finalPay=pay-newPrice;
+                uChange.setText(Double.toString(finalPay));
+
+            }
+        });
+
+    }
+
+    public static void main(String[] args) {
+        JFrame frame= new ProgWri11("Store");
+        frame.setVisible(true);
+        frame.setSize(390,350);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ImageIcon image= new ImageIcon("gucci-logo-49102.png");
+        frame.setIconImage(image.getImage());
+
+
+    }
+}
